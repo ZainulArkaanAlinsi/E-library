@@ -86,7 +86,7 @@ include 'partials/header.php'; // Include the header file for the login page
                     <input type="text" class="form-control form-control-lg placeholder col-12 bg-secondary" name="address" placeholder="Address" required>
                 </div>
 
-               
+
                 <div class="d-grid gap-2">
                     <button type="submit" class="btn btn-primary btn-lg position-relative">
                         <span class="spinner-border spinner-border-sm me-2 d-none" role="status" id="loadingSpinner"></span>
@@ -107,16 +107,13 @@ include 'partials/footer.php'; // Include the footer file for the login page
 
 <script>
     const form = document.querySelector('form');
-const spinner = document.getElementById('loadingSpinner');
+    const spinner = document.querySelector('#loadingSpinner');
+    const submitButton = document.querySelector('button[type="submit"]');
 
-form.addEventListener('submit', function(e) {
-    // Tampilkan spinner
-    spinner.classList.remove('d-none');
-    
-    // Nonaktifkan tombol selama loading
-    this.querySelector('button[type="submit"]').disabled = true;
-    
-    // Proses form submission...
-    // Setelah selesai, sembunyikan spinner dan aktifkan kembali tombol
-});
+    form.addEventListener('submit', function(e) {
+        spinner.classList.remove('d-none');
+        submitButton.disabled = true;
+    });
+   
+
 </script>
