@@ -1,0 +1,14 @@
+$primary: #f2da7c;
+
+
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+
+
+$custom-theme-colors:(    
+    "navy: #001f3f",
+    "cyan: #2ecc71"
+    "teal: #39cccc"
+);
+
+@import "../../node_modules/bootstrap/scss/bootstrap"; 
